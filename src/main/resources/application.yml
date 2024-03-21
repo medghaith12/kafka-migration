@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/products
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: mongo_admin
+      password: mongo_password
+      database: products
+      authentication-database: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+  kafka:
+    bootstrap-servers: localhost:29092
+    schema-registry-url: http://localhost:8081
+    producer:
+      topic: product-topic
